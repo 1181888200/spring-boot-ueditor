@@ -1,17 +1,15 @@
 package com.lwl.ueditor;
 
-import org.springframework.beans.factory.annotation.Value;
 
 public class EduitorConfig {
 
-	@Value("${ueditor.upload.path}")
+	//上传文件保存在哪个目录下
 	public static final String FTP_SQL_IMG_UPLOADPATH = "E:\\";//上传文件夹
 	
-	
-	@Value("${ueditor.config.name}")
+	//配置文件的名称
 	public static final String UE_CONFIG_NAME = "ueditor.config.json";
 	
-	@Value("${ueditor.config.path}")
+	//配置文件所在目录，如果为空则从classpath目录取，默认为空即可
 	public static final  String UE_CONFIG_PATH = null;
 	
 }
