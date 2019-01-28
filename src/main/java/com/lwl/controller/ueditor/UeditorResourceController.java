@@ -15,12 +15,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lwl.ueditor.EduitorConfig;
 
-
+/**
+ * 获取上传后的文件入口
+ * @author lwl
+ * @create 2019年1月28日 下午2:08:29
+ * @version 1.0
+ */
 @Controller
 @RequestMapping
 public class UeditorResourceController {
 
 	
+	/**
+	 * 此方法根据ueditor.config.json 中各自对应的【xxxxxPathFormat】属性
+	 * @param type
+	 * @param date
+	 * @param file
+	 * @param response
+	 * @throws IOException
+	 * @author lwl
+	 * @create 2019年1月28日 下午2:08:45
+	 */
 	@RequestMapping(value="/upload/ueditor/{type}/{date}/{file}")
 	public void download(@PathVariable String type , @PathVariable String date , @PathVariable String file, HttpServletResponse response) throws IOException {
         byte[] stream =  getMedia(type, date, file, null);

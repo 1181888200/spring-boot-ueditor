@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.lwl.ueditor.ActionEnter;
 
 
+/**
+ * 读取配置文件的入口，一般显示后台配置有问题，都是这个入口没有找到对应的文件
+ * 这个入口要和ueditor.config.js中serverUrl保持一致
+ * @author lwl
+ * @create 2019年1月28日 下午2:09:57
+ * @version 1.0
+ */
 @Controller
 @RequestMapping("/ue")
 public class UeditorConfigController {
